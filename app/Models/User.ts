@@ -20,9 +20,9 @@ export default class User extends BaseModel {
   @column()
   public rememberMeToken?: string
 
-  @column()
+  @column({ autoCreate: true })
   public createdAt: DateTime
 
-  @column()
+  @column({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 }

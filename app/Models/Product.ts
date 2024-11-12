@@ -20,9 +20,9 @@ export default class Product extends BaseModel {
   @column()
   public image: string
 
-  @column()
+  @column({ autoCreate: true })
   public createdAt: DateTime
 
-  @column()
+  @column({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 }
