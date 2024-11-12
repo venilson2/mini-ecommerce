@@ -8,6 +8,9 @@ export default class User extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column({columnName: 'full_name'})
+  public fullName: string
+
   @column()
   public email: string
 
