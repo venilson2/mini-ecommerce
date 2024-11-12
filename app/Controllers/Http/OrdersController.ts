@@ -31,11 +31,15 @@ export default class OrdersController {
 
       const products = await Product.query().whereIn('id', productIds)
 
-      const totalAmount = products.reduce((total, product) => total + product.price, 0)
-
       if (products.length !== productIds.length) {
         return response.badRequest({ message: 'Some products not found' })
       }
+
+      let totalAmount = 0;
+      
+      products.forEach((product) => {
+        totalAmount += parseFloat(product.price.toString());
+      });
 
       const order = await Order.create({
         userId: user.id, 

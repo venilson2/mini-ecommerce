@@ -15,6 +15,7 @@ export default class PaymentsController {
 
             if (paymentSuccessful) {
                 order.status = 'completed';
+                order.paymentStatus = 'completed';
                 await order.save();
                 return response.json({ message: 'Payment processed successfully', order });
             } else {
