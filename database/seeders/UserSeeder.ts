@@ -10,8 +10,8 @@ export default class UserSeederSeeder extends BaseSeeder {
       fullName: 'Example User',
       email: 'example@example.com',
       password: await Hash.make('123'),
-      createdAt: DateTime.local(),
-      updatedAt:  DateTime.local(),
+      // createdAt: DateTime.local(),
+      // updatedAt:  DateTime.local(),
     })
   }
 }

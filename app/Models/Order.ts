@@ -18,7 +18,7 @@ export default class Order extends BaseModel {
   @column()
   public paymentStatus: string
 
-  @column({ autoCreate: true })
+  @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
