@@ -9,7 +9,6 @@ export default class Products extends BaseSchema {
       table.string('name', 255).notNullable()
       table.decimal('price', 10, 2).notNullable();
       table.string('description', 255).notNullable()
-      table.integer('stock').notNullable()
       table.string('image', 255).notNullable()
       table.timestamps(true)
     })

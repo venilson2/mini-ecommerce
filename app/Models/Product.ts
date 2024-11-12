@@ -15,9 +15,6 @@ export default class Product extends BaseModel {
   public description: string
   
   @column()
-  public stock: number
-  
-  @column()
   public image: string
 
   @column({ autoCreate: true })
