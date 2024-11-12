@@ -6,6 +6,6 @@ Route.group(() => {
     Route.post('/', 'OrdersController.store')
   })
   .prefix('/orders')
-  .middleware('auth')
+  // .middleware('auth')
 
 }).prefix('/api') 
